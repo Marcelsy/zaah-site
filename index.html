@@ -32,22 +32,79 @@
   .thanks{display:none;text-align:center;padding:20px}
   footer{margin-top:32px}
   a{color:#ffb000}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .btn-sec{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid #3a3f4b;color:#eef0f3;background:transparent;font-weight:600;font-size:14px;line-height:1;text-decoration:none;white-space:nowrap}
+  .btn-sec:hover{border-color:#ffb000;color:#ffb000}
+  .btn-sec:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .why{margin:4px 0 28px}
+  .why .kicker{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffb000}
+  .why .kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:#ffb000}
+  .why h2{font-size:26px;line-height:1.15;margin:0 0 14px}
+  .cmp{display:grid;gap:8px}
+  .crow{background:#1a1d24;border-radius:12px;padding:14px}
+  .crow h3{margin:0 0 10px;font-size:16px}
+  .cell{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start;margin:0;font-size:14.5px;line-height:1.4}
+  .cell + .cell{margin-top:8px}
+  .cell.no{color:#b7bcc6}
+  .mk{font-weight:800;line-height:1.35}
+  .cell.yes .mk{color:#ffb000}
+  .cell.no .mk{color:#6e7582}
+  .who{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:2px}
+  .cell.yes .who{color:#ffb000}
+  .cell.no .who{color:#8a909c}
+  @media(min-width:640px){
+    .crow{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;align-items:start}
+    .crow h3{grid-column:1/-1;margin:0}
+    .cell + .cell{margin-top:0}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="logo">ZAAH<span>.</span></div>
+  <div class="top">
+    <div class="logo">ZAAH<span>.</span></div>
+    <a class="btn-sec" href="/demo/">Kika på en demo</a>
+  </div>
 
   <h1>Köp och sälj fälgar och hjul tryggt i hela Sverige</h1>
   <p class="lead">Pengarna hålls tills köparen har fått och godkänt varan. Vi fraktar hela hjulsatser landet runt, och du kan buda eller köpa direkt.</p>
 
-  <ul class="usp">
-    <li><strong>Trygg betalning:</strong> köparen betalar till Zaah, och säljaren får pengarna först när köparen fått varan och godkänt den. Inga bluffar, inget förskott på chans.</li>
-    <li><strong>Frakt av hela hjulsatser:</strong> fyra kompletta hjul skickas i hela Sverige, inte bara till den som bor i närheten.</li>
-    <li><strong>Budgivning:</strong> säljaren väljer fast pris eller låter köparna buda.</li>
-    <li><strong>Det du ser är det du får:</strong> krav på bilder av märkning, mönsterdjup och skador.</li>
-    <li><strong>Hitta rätt direkt:</strong> sök på tum, ET och bultmönster, eller skriv ditt regnummer och se det som passar bilen.</li>
-  </ul>
+  <section class="why" id="darfor" aria-labelledby="darfor-h">
+    <p class="kicker">Därför Zaah</p>
+    <h2 id="darfor-h">Det andra annonssajter inte gör</h2>
+    <div class="cmp">
+      <article class="crow">
+        <h3>Trygg betalning</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Pengarna hålls tills köparen godkänt varan.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Betalning direkt mellan köpare och säljare. Risken hos köparen.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Frakt av hjulsatser</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Hela hjulsatser och stora delar skickas i hela Sverige.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Frakt med köpskydd stannar ofta vid ca 20 kg, så hjulsatser blir lokala affärer utan skydd.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Bud eller Köp nu</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Du väljer. Budgivning, Köp nu, eller båda.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Oftast bara fast pris, eller bara bud.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Byggt för bilfolk</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Sök på regnummer och spec: ET, bultmönster, navhål, däckdimension.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Fritext. Om det passar får du räkna ut själv.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Bilder och BankID</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Krav på bilder av märkning, mönsterdjup och skador. Säljare verifierade med BankID.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Bilder och vem som säljer är upp till säljaren.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Gratis att lägga upp</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Ingen annonsavgift. Säljaren betalar bara när det blir en affär.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Ofta en avgift redan för att lägga upp.</span></p>
+      </article>
+    </div>
+  </section>
 
   <div class="card">
     <h2 style="margin-top:0">Skriv upp dig på väntelistan</h2>
