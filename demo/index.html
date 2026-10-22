@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem("zaah-theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";if(t==="dark")document.documentElement.classList.add("dark")}catch(e){}})();</script>
+<title>Zaah – Köp och sälj bilar, fälgar, däck och delar tryggt</title>
+<meta name="description" content="Marknadsplatsen för allt till bilen. Pengarna hålls tills du godkänt varan, frakt i hela Sverige, budgivning och BankID-verifierade säljare.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+:root{--ink:#0B0B0C;--ink2:#3F4247;--mut:#6B6F76;--line:#E8E8E6;--soft:#F5F5F3;--bg:#FFFFFF;--acc:#FFB000;--acc-h:#F0A400;--ok:#14A25C;--r:16px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.w{max-width:1280px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:"Inter Tight","Inter",system-ui,sans-serif;letter-spacing:-.02em}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.skiss{background:var(--acc);color:var(--ink);font-size:12.5px;font-weight:600;text-align:center;padding:6px 12px}
+.ex{display:inline-flex;align-items:center;font:600 11px/1 "Inter",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);background:var(--soft);border-radius:999px;padding:6px 10px;vertical-align:middle}
+
+/* NAV */
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;height:68px;gap:32px}
+.logo{font:800 24px/1 "Inter Tight",sans-serif;letter-spacing:.04em}
+.logo b{color:var(--acc)}
+.links{display:none;gap:28px;font-weight:600;font-size:15px;color:var(--ink2)}
+.links a:hover{color:var(--ink)}
+.nav .r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;background:var(--acc);color:var(--ink);font:600 15px/1 "Inter",sans-serif;padding:13px 20px;cursor:pointer;transition:background .15s,transform .15s;white-space:nowrap}
+.btn:hover{background:var(--acc-h)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.white{background:#fff;color:var(--ink)}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.lg{font-size:16px;padding:17px 26px}
+.acct{display:none}
+.burger{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center}
+
+/* HERO */
+.hero{position:relative;background:#000;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/hero.jpg) no-repeat 50% 100%/118% auto}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.35) 100%)}
+.hero .w{position:relative;padding-top:40px;padding-bottom:190px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.72);margin:0 0 16px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.hero h1{font-weight:800;font-size:44px;line-height:1;margin:0 0 16px;max-width:640px}
+.hero h1 span{color:var(--acc)}
+.hero p.lead{font-size:17px;color:rgba(255,255,255,.78);margin:0 0 28px;max-width:500px}
+.search{background:#fff;color:var(--ink);border-radius:20px;padding:8px;display:grid;gap:6px;max-width:640px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.seg{padding:10px 14px;border-radius:14px;display:flex;flex-direction:column;min-width:0}
+.seg:hover{background:var(--soft)}
+.seg label{font-size:12px;font-weight:600}
+.seg input,.seg select{border:0;background:transparent;font:inherit;font-size:15px;color:var(--ink);padding:1px 0;outline:none;width:100%;min-width:0;-webkit-appearance:none;appearance:none}
+.seg input::placeholder{color:#8B8F96}
+.seg+.seg{border-top:1px solid var(--line);border-radius:0}
+.sbtn{border:0;background:var(--acc);color:var(--ink);border-radius:14px;height:52px;display:flex;align-items:center;justify-content:center;gap:8px;font:600 16px/1 "Inter",sans-serif;cursor:pointer}
+.sbtn svg{width:20px;height:20px}
+.reg{display:inline-flex;align-items:center;gap:10px;margin-top:16px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.9)}
+.mini{white-space:nowrap;flex:none;display:inline-flex;border-radius:4px;overflow:hidden;background:#fff;color:#000;font:700 12px/1 Arial,sans-serif;letter-spacing:1.5px}
+.mini b{background:#1E4BB4;color:#fff;padding:5px 4px;font-size:10px}
+.mini span{padding:5px 7px}
+.lg-only{display:none}
+.reg u{text-decoration-color:var(--acc);text-underline-offset:4px;text-decoration-thickness:2px}
+.hcards{display:grid;gap:10px;position:relative;margin-top:16px}
+.hc{background:var(--soft);border-radius:18px;padding:16px;color:var(--ink);display:flex;align-items:center;gap:14px}
+.hc .chev{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}.hc .chev svg{width:16px;height:16px}
+.hc .btn{display:none}
+.hc .t{flex:1}
+.hc b{display:block;font:700 17px/1.25 "Inter Tight",sans-serif}
+.hc small{color:var(--mut);font-size:14px}
+.hc .btn{padding:11px 16px;font-size:14px}
+.hc .ic{width:42px;height:42px;border-radius:12px;background:var(--acc);color:var(--ink);display:grid;place-items:center;flex:none}
+
+/* SECTIONS */
+section{padding:64px 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:24px}
+.sh h2{font-weight:800;font-size:30px;line-height:1.05;margin:0}
+.sh p{margin:6px 0 0;color:var(--mut)}
+.arrow{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;white-space:nowrap}
+.arrow svg{width:18px;height:18px}
+
+/* KATEGORIER */
+.cats{display:grid;grid-auto-flow:column;grid-auto-columns:64%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 4px;scrollbar-width:none}
+.cats::-webkit-scrollbar,.chips::-webkit-scrollbar,.grid::-webkit-scrollbar{display:none}
+.cat{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:3/4;scroll-snap-align:start;background:#111;color:#fff}
+.cat img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cat:hover img{transform:scale(1.04)}
+.cat:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.72) 100%)}
+.cat .lbl{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.cat h3{margin:0;font-weight:700;font-size:21px;line-height:1.1}
+.cat small{display:block;font-size:13px;color:rgba(255,255,255,.75);margin-top:4px}
+.cat .go{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;flex:none}
+.cat .go svg{width:16px;height:16px}
+
+/* ANNONSER */
+.chips{display:flex;gap:8px;overflow-x:auto;margin:0 -20px 24px;padding:0 20px;scrollbar-width:none}
+.chip{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:14px;font-weight:500;color:var(--ink2)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip.fit{border-color:var(--ink)}
+.grid{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px;scrollbar-width:none}
+.card{scroll-snap-align:start;display:block}
+.card .im{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1;background:var(--soft)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .im img{transform:scale(1.04)}
+.pill{position:absolute;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 10px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:6px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.pill svg{width:14px;height:14px;color:var(--ok)}
+.heart{position:absolute;top:10px;right:10px;width:34px;height:34px;display:grid;place-items:center;color:#fff}
+.heart svg{width:26px;height:26px;fill:rgba(0,0,0,.35);stroke:#fff;stroke-width:2}
+.timer{position:absolute;left:12px;bottom:12px;background:rgba(11,11,12,.78);color:#fff;border-radius:8px;padding:5px 9px;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums}
+.card .tx{padding:12px 2px 0}
+.card .top{display:flex;justify-content:space-between;gap:10px}
+.card h3{font:600 15.5px/1.3 "Inter",sans-serif;letter-spacing:0;margin:0}
+.card .rt{font-size:14px;white-space:nowrap}
+.card .meta{color:var(--mut);font-size:14px;margin:2px 0 6px}
+.card .pr{font-size:15px}
+.card .pr b{font-weight:700}
+.card .pr span{color:var(--mut)}
+.ver{display:inline-flex;align-items:center;gap:4px;color:var(--ok);font-weight:600;font-size:13px;margin-top:4px}
+.ver svg{width:14px;height:14px}
+
+/* SÅ FUNKAR */
+.how{display:grid;gap:12px}
+.step{background:var(--soft);border-radius:20px;padding:20px;display:grid;grid-template-columns:44px 1fr;column-gap:16px}
+.step h3,.step p{grid-column:2}
+.step .n{grid-row:span 2;width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font:700 18px/1 "Inter Tight",sans-serif}
+.step:last-child .n{background:var(--acc);color:var(--ink)}
+.step h3{font-weight:700;font-size:19px;margin:8px 0 6px;line-height:1.15}
+.step p{margin:0;color:var(--ink2);font-size:15.5px}
+
+/* GARANTI */
+.guar{background:var(--ink);color:#fff;border-radius:28px;padding:36px 24px;display:grid;gap:36px;align-items:center;overflow:hidden;position:relative}
+.guar h2{font-weight:800;font-size:34px;line-height:1.02;margin:0 0 14px}
+.guar h2 span{color:var(--acc)}
+.guar p{color:rgba(255,255,255,.72);margin:0 0 24px;max-width:480px}
+.checks{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:14px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks .c{width:26px;height:26px;border-radius:50%;background:rgba(20,162,92,.18);color:#3FD488;display:grid;place-items:center;flex:none;margin-top:1px}
+.checks .c svg{width:14px;height:14px;stroke-width:3}
+.checks b{display:block;font-weight:600}
+.checks small{color:rgba(255,255,255,.62);font-size:14px}
+.mock{background:#fff;color:var(--ink);border-radius:22px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.45);max-width:420px;width:100%;justify-self:center}
+.mock .row{display:flex;gap:14px;align-items:center}
+.mock img{width:72px;height:72px;border-radius:12px;object-fit:cover}
+.mock .st{display:inline-flex;align-items:center;gap:6px;background:#FFF4DA;color:#7A5200;font-size:12.5px;font-weight:600;border-radius:999px;padding:5px 10px;margin-bottom:6px}
+.mock .st i{width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.mock h4{margin:0;font-size:15px;font-weight:600}
+.mock .sum{font-size:13.5px;color:var(--mut)}
+.track{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:18px 0 8px}
+.track span{height:6px;border-radius:9px;background:var(--line)}
+.track span.d{background:var(--ok)}
+.track span.a{background:var(--acc)}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:11.5px;color:var(--mut)}
+.tl b{color:var(--ink);font-weight:600}
+.held{margin:18px 0 14px;background:var(--soft);border-radius:14px;padding:14px;display:flex;justify-content:space-between;align-items:center}
+.held small{display:block;color:var(--mut);font-size:12.5px}
+.held b{font:800 22px/1.1 "Inter Tight",sans-serif}
+.mock .btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mock .btns .btn{padding:13px 10px;font-size:14px}
+.seller{display:flex;align-items:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px}
+.av{width:32px;height:32px;border-radius:50%;background:#2B2D31;color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px}
+.badge{display:inline-flex;align-items:center;gap:4px;background:#E7F6EE;color:#0E7A44;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:600}
+.badge svg{width:12px;height:12px;stroke-width:3}
+
+/* SÄLJ */
+.sell{display:grid;gap:28px;align-items:center}
+.sell .ph{border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+.sell .ph img{width:100%;height:100%;object-fit:cover}
+.sell h2{font-weight:800;font-size:34px;line-height:1.02;margin:0 0 14px}
+.sell p{color:var(--ink2);margin:0 0 24px;max-width:480px;font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 0 28px}
+.stats div{padding:16px 0}
+.stats div+div{border-left:1px solid var(--line);padding-left:16px}
+.stats b{display:block;font:800 28px/1.1 "Inter Tight",sans-serif}
+.stats small{color:var(--mut);font-size:13px}
+.micro{font-size:13px;color:var(--mut);margin:14px 0 0}
+
+/* FOOTER */
+footer{background:var(--soft);border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--ink2);margin-top:24px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.fg>div:first-child{grid-column:1/-1}
+footer h4{font-size:14px;color:var(--ink);margin:0 0 12px}
+footer a{display:block;margin:8px 0}
+footer a:hover{text-decoration:underline}
+.fb{border-top:1px solid var(--line);margin-top:36px;padding-top:20px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;color:var(--mut);font-size:13px}
+
+@media(min-width:760px){
+ .hero h1{font-size:60px}
+ .hero .bg{background-size:100% auto}
+ .hero .w{padding-bottom:300px}
+ .lg-only{display:inline}
+ .search{grid-template-columns:1fr 190px auto;align-items:center;border-radius:999px;padding:8px 8px 8px 12px}
+ .seg{border-radius:999px;padding:9px 18px}
+ .seg+.seg{border-top:0;border-left:1px solid var(--line);border-radius:0}
+ .sbtn{width:auto;padding:0 26px;border-radius:999px;height:56px}
+ .hcards{grid-template-columns:1fr 1fr}
+ .cats{grid-auto-columns:38%}
+ .grid{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(2,1fr);overflow:visible;margin:0;padding:0;row-gap:32px}
+ .how{grid-template-columns:repeat(3,1fr);gap:16px}
+ .step{display:block;padding:26px;border-radius:24px}.step .n{margin-bottom:22px}.step h3{font-size:21px;margin:0 0 8px}
+ .fg{grid-template-columns:2fr 1fr 1fr 1fr}
+ .fg>div:first-child{grid-column:auto}
+ .sh h2{font-size:36px}
+}
+@media(min-width:1040px){
+ .w{padding:0 40px}
+ .links,.acct{display:flex}
+ .burger{display:none}
+ .hero{min-height:640px}
+ .hero .bg{background-size:auto 112%;background-position:right -60px center}
+ .hero .bg:after{background:linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.6) 34%,rgba(0,0,0,0) 60%),linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.55) 100%)}
+ .hero .w{padding-top:96px;padding-bottom:170px}
+ .hero h1{font-size:76px}
+ .hero .bg{background-size:auto 112%}
+ .hcards{margin-top:-128px;padding-bottom:36px;gap:12px}
+ .hc{background:rgba(22,22,24,.62);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.14);padding:18px 20px;color:#fff;gap:16px}
+ .hc small{color:rgba(255,255,255,.72)}
+ .hc .ic{background:rgba(255,176,0,.16);color:var(--acc)}
+ .hc .btn{display:inline-flex}.hc .chev{display:none}
+ .cats{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(5,1fr);overflow:visible;margin:0;padding:0;gap:16px}
+ .grid{grid-template-columns:repeat(4,1fr);column-gap:24px;row-gap:40px}
+ .chips{margin:0 0 28px;padding:0}
+ section{padding:88px 0}
+ .sh h2{font-size:40px}
+ .guar{grid-template-columns:1.1fr .9fr;padding:72px;gap:56px}
+ .guar h2{font-size:52px}
+ .sell{grid-template-columns:1fr 1fr;gap:72px}
+ .sell h2{font-size:52px}
+}
+
+/* ===== MÖRKT LÄGE ===== */
+.theme{width:42px;height:42px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;flex:none;padding:0;transition:background .15s}
+.theme:hover{background:var(--soft)}
+.theme svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.theme .sun{display:none}
+html.dark .theme .sun{display:block}
+html.dark .theme .moon{display:none}
+html.dark{color-scheme:dark;--bg:#0B0C0F;--ink:#F2F2EF;--ink2:#C7C9CE;--mut:#9A9EA7;--line:#25282F;--soft:#16181D;--ok:#34C47C}
+html.dark body{background:var(--bg)}
+html.dark header,html.dark .fh{background:rgba(11,12,15,.92);backdrop-filter:blur(10px);border-bottom-color:var(--line)}
+/* fyllda "mörka" knappar blir ljusa */
+html.dark .btn.dark,html.dark .chip.on,html.dark .chips2 span.on,html.dark .step .n,html.dark .cb.on,html.dark .ps .bd.req{background:#F2F2EF;color:#0B0C0F;border-color:#F2F2EF}
+html.dark .step:last-child .n{background:var(--acc)}
+html.dark .btn.ghost{border-color:#33363E}
+html.dark .chip{border-color:#2E3138;color:var(--ink2)}
+/* sökrutan i hero förblir vit i båda lägen */
+html.dark .search{--ink:#0B0B0C;--line:#E8E8E6;--soft:#F5F5F3;--mut:#6B6F76;color-scheme:light}
+/* hero-korten under hero på mobil */
+html.dark .hc .chev{background:#24272E;color:var(--ink)}
+/* etiketter på bilder */
+html.dark .pill,html.dark .gal .cap,html.dark .rq .ok,html.dark .ps .bd:not(.req){background:rgba(16,17,21,.86);color:#F2F2EF;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+html.dark .gal .all{background:rgba(16,17,21,.9);color:#F2F2EF;border-color:#3A3D45}
+/* garanti/trygghet: egen yta med gul glöd, skild från sidan */
+html.dark .guar,html.dark .trust,html.dark .calc{background:radial-gradient(700px 360px at 85% 0%,rgba(255,176,0,.12),transparent 60%),#15171C;border:1px solid #2A2D35}
+html.dark .mock{background:#1C1F25;color:var(--ink);box-shadow:0 30px 60px rgba(0,0,0,.6);border:1px solid #2C2F37}
+html.dark .mock .st{background:rgba(255,176,0,.14);color:#FFC94D}
+html.dark .held{background:#14161A}
+html.dark .track span{background:#33363E}
+html.dark .track span.d{background:var(--ok)}
+html.dark .track span.a{background:var(--acc)}
+html.dark .badge{background:rgba(52,196,124,.14);color:#5BD69A}
+html.dark .av{background:#33363E}
+/* kort och rutor */
+html.dark .box,html.dark .ship,html.dark .scard,html.dark .res,html.dark .st,html.dark .sc,html.dark .kf div,html.dark .prev{background:#121418;border-color:var(--line)}
+html.dark .box{box-shadow:0 10px 30px rgba(0,0,0,.45)}
+html.dark .st.now{border-color:#F2F2EF;box-shadow:0 12px 32px rgba(0,0,0,.5)}
+html.dark .qb button{background:#121418;color:var(--ink);border-color:#2E3138}
+html.dark .qb button.on,html.dark .qb button:hover{border-color:#F2F2EF}
+html.dark .bidin{border-color:#F2F2EF}
+html.dark .bidin input{background:transparent;color:var(--ink)}
+html.dark .rm{background:rgba(52,196,124,.12);color:#5BD69A}
+html.dark .res{border-color:rgba(52,196,124,.32)}
+html.dark .res .h i{background:var(--ok)}
+html.dark .tread>div{background:var(--soft)}
+html.dark .bar{background:#2C2F36}
+html.dark .rq .tag{background:rgba(11,12,15,.86)}
+html.dark .av2{background:linear-gradient(135deg,#3A3D45,#5A5D65)}
+html.dark .av2 i{border-color:var(--bg)}
+html.dark .mbar{background:rgba(11,12,15,.96);border-top-color:var(--line)}
+/* formulär */
+html.dark .fld{background:#121418;border-color:#30333B;color:var(--ink)}
+html.dark .fld.f{background:#10201A;border-color:#2B6A4A}
+html.dark .fld::placeholder,html.dark .bidin input::placeholder{color:#6F737B}
+html.dark .segc span.on{background:#2A2D34;color:var(--ink);box-shadow:none}
+html.dark .ct{border-color:#30333B}
+html.dark .ct.on{border-color:#F2F2EF;background:#1A1C21}
+html.dark .oc{border-color:#30333B}
+html.dark .oc.on{border-color:#F2F2EF}
+html.dark .oc.on .rad{border-color:#F2F2EF}
+html.dark .rad,html.dark .cb{border-color:#5A5E66}
+html.dark .ps.empty{background:#121418;border-color:#3A3D45}
+html.dark .ps.empty.must{background:rgba(255,176,0,.06);border-color:var(--acc)}
+html.dark .state.ok{background:rgba(52,196,124,.14);color:#5BD69A}
+html.dark .state.now{background:rgba(255,176,0,.14);color:#FFC94D}
+html.dark .okl{color:#5BD69A}
+html.dark .clist li[style]{color:#FFC94D!important}
+html.dark .bankid{border-color:var(--line)}
+html.dark .regq,html.dark .tips,html.dark .fitbox{background:var(--soft)}
+html.dark .plate{border-color:#000}
+html.dark .prog{background:#1E2026}
+html.dark .prog i{background:var(--acc)}
+html.dark .btn.white,html.dark .cat .go{color:#0B0B0C}
+/* sidfot */
+html.dark footer{background:#08090B;border-top-color:var(--line)}
+html.dark .fb{border-top-color:var(--line)}
+html.dark .stats,html.dark .stats div+div{border-color:var(--line)}
+</style>
+</head>
+<body>
+<div class="skiss">SKISS – designförslag, inte live. Annonser, priser, antal och säljare är exempel. Foton: Unsplash (tillfälliga).</div>
+
+<header>
+ <div class="w nav">
+  <a class="logo" href="index.html">ZAAH<b>.</b></a>
+  <nav class="links"><a href="#kategorier">Köp</a><a href="salj.html">Sälj</a><a href="#sa-funkar-det">Så funkar det</a><a href="#garanti">Trygg betalning</a></nav>
+  <div class="r"><button class="theme" type="button" aria-label="Byt till mörkt läge" title="Mörkt/ljust läge"><svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+   <a class="btn ghost acct" href="#"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Logga in med BankID</a>
+   <a class="btn" href="salj.html">Sälj något</a>
+   <span class="burger"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+  </div>
+ </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0" aria-labelledby="h1">
+ <div class="bg" role="img" aria-label="Svart bil i profil i mörker"></div>
+ <div class="w">
+  <p class="eyebrow"><i></i>Marknadsplatsen för allt till bilen</p>
+  <h1 id="h1">Köp och sälj allt till bilen. <span>Tryggt.</span></h1>
+  <p class="lead">Bilar, fälgar, däck, delar och tillbehör från BankID-verifierade säljare. Pengarna hålls tills du godkänt varan.</p>
+  <form class="search" role="search" action="annons.html">
+   <div class="seg"><label for="q">Vad letar du efter?</label><input id="q" placeholder="t.ex. vinterhjul 17 tum"></div>
+   <div class="seg"><label for="k">Kategori</label><select id="k"><option>Alla kategorier</option><option>Bilar</option><option>Fälgar &amp; hjul</option><option>Däck</option><option>Reservdelar</option><option>Tillbehör</option></select></div>
+   <button class="sbtn" type="submit"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>Sök</button>
+  </form>
+  <a class="reg" href="#annonser"><span class="mini"><b>S</b><span>ABC 123</span></span><u>Sök på regnummer<span class="lg-only">, se bara det som passar</span></u></a>
+ </div>
+</section>
+
+<div class="w hcards">
+ <div class="hc"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div class="t"><b>Pengarna hålls tills du godkänt</b><small>Säljaren får betalt först när varan är hos dig.</small></div><a class="btn white" href="#garanti">Så funkar det</a><span class="chev"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span></div>
+ <div class="hc"><span class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><div class="t"><b>Sälj gratis</b><small>0 kr att lägga upp. Du betalar bara vid affär.</small></div><a class="btn white" href="salj.html">Lägg upp annons</a><span class="chev"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></span></div>
+</div>
+
+<section id="kategorier" style="padding-top:48px">
+ <div class="w">
+  <div class="sh"><div><h2>Utforska kategorier</h2><p>Allt till bilen, på ett ställe. <span class="ex">Antal = exempel</span></p></div></div>
+  <div class="cats">
+   <a class="cat" href="#annonser"><img src="img/cat-bilar.jpg" alt="Grå sportbil framför garage" loading="lazy" style="object-position:50% 50%"><div class="lbl"><div><h3>Bilar</h3><small>1 240 annonser</small></div><span class="go"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+   <a class="cat" href="annons.html"><img src="img/cat-falgar.jpg" alt="Silverfälg med gult bromsok" loading="lazy" style="object-position:50% 50%"><div class="lbl"><div><h3>Fälgar &amp; hjul</h3><small>3 410 annonser</small></div><span class="go"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+   <a class="cat" href="#annonser"><img src="img/cat-dack.jpg" alt="Staplade däck med fälg överst" loading="lazy"><div class="lbl"><div><h3>Däck</h3><small>2 860 annonser</small></div><span class="go"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+   <a class="cat" href="#annonser"><img src="img/cat-delar.jpg" alt="Bromsskiva och bromsok" loading="lazy" style="object-position:40% 50%"><div class="lbl"><div><h3>Reservdelar</h3><small>5 120 annonser</small></div><span class="go"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+   <a class="cat" href="#annonser"><img src="img/cat-tillbehor.jpg" alt="Kombi med takbox" loading="lazy" style="object-position:45% 50%"><div class="lbl"><div><h3>Tillbehör</h3><small>1 730 annonser</small></div><span class="go"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div></a>
+  </div>
+ </div>
+</section>
+
+<section id="annonser" style="padding-top:8px">
+ <div class="w">
+  <div class="sh"><div><h2>Populärt just nu</h2><p>Från verifierade säljare i hela Sverige. <span class="ex">Exempel</span></p></div><a class="arrow" href="#">Visa alla <svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="chips">
+   <span class="chip on">Alla</span><span class="chip">Bilar</span><span class="chip">Fälgar &amp; hjul</span><span class="chip">Däck</span><span class="chip">Reservdelar</span><span class="chip">Tillbehör</span>
+   <span class="chip fit"><span class="mini"><b>S</b><span>ABC 123</span></span>Passar min bil</span>
+   <span class="chip">Budgivning</span><span class="chip">Slutar snart</span>
+  </div>
+  <div class="grid">
+   <a class="card" href="#"><div class="im"><img src="img/l-bil1.jpg" alt="Vit sportbil i garage" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span><span class="timer">Bud · 2 d 6 h</span></div>
+    <div class="tx"><div class="top"><h3>Chevrolet Camaro ZL1, 2018</h3><span class="rt">★ 4,9</span></div><div class="meta">2 900 mil · Automat · Stockholm</div><div class="pr"><b>389 000 kr</b> <span>ledande bud</span></div></div></a>
+   <a class="card" href="annons.html"><div class="im"><img src="img/l-hjul1.jpg" alt="Svart fälg med rött bromsok" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span><span class="timer">Bud · 1 d 4 h</span></div>
+    <div class="tx"><div class="top"><h3>19" svarta fälgar med sommardäck</h3><span class="rt">★ 4,8</span></div><div class="meta">8,5Jx19 · ET35 · 5x112 · Göteborg</div><div class="pr"><b>6 200 kr</b> <span>· frakt 449 kr</span></div></div></a>
+   <a class="card" href="#"><div class="im"><img src="img/l-dack1.jpg" alt="Fyra däck staplade" loading="lazy" style="object-position:50% 60%"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span></div>
+    <div class="tx"><div class="top"><h3>Vinterdäck 205/55 R16, 4 st</h3><span class="rt">★ 5,0</span></div><div class="meta">Dubbfria · 7,1 mm · Umeå</div><div class="pr"><b>2 900 kr</b> <span>köp nu</span></div></div></a>
+   <a class="card" href="annons.html"><div class="im"><img src="img/l-hjul2.jpg" alt="Guldfärgad mesh-fälg" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span><span class="timer">Bud · 5 h 12 min</span></div>
+    <div class="tx"><div class="top"><h3>17" guld mesh, nyrenoverade</h3><span class="rt">★ 4,7</span></div><div class="meta">7,5Jx17 · ET35 · 4x100 · Malmö</div><div class="pr"><b>4 100 kr</b> <span>· frakt 399 kr</span></div></div></a>
+   <a class="card" href="#"><div class="im"><img src="img/l-del1.jpg" alt="Bromsskiva och bromsok" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span></div>
+    <div class="tx"><div class="top"><h3>Bromsskivor + belägg fram, Golf 7</h3><span class="rt">★ 4,9</span></div><div class="meta">Nya, oöppnade · 312 mm · Uppsala</div><div class="pr"><b>1 450 kr</b> <span>köp nu</span></div></div></a>
+   <a class="card" href="#"><div class="im"><img src="img/l-bil2.jpg" alt="Mörk bil i skymning" loading="lazy" style="object-position:50% 70%"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span><span class="timer">Bud · 3 d</span></div>
+    <div class="tx"><div class="top"><h3>BMW M2 Competition, 2019</h3><span class="rt">★ 4,8</span></div><div class="meta">5 100 mil · Manuell · Örebro</div><div class="pr"><b>412 000 kr</b> <span>ledande bud</span></div></div></a>
+   <a class="card" href="#"><div class="im"><img src="img/l-tillb1.jpg" alt="Takbox på biltak" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span></div>
+    <div class="tx"><div class="top"><h3>Takbox 420 liter med fästen</h3><span class="rt">★ 4,6</span></div><div class="meta">Låsbar · 2 nycklar · Luleå</div><div class="pr"><b>2 200 kr</b> <span>köp nu</span></div></div></a>
+   <a class="card" href="#"><div class="im"><img src="img/l-hjul3.jpg" alt="Svart femekrad fälg" loading="lazy"><span class="pill"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Verifierad</span><span class="heart"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-9-9c-1.2-2.9.7-6 3.8-6 2 0 3.3 1.2 5.2 3 1.9-1.8 3.2-3 5.2-3 3.1 0 5 3.1 3.8 6-2 4.6-9 9-9 9z"/></svg></span><span class="timer">Bud · 22 h</span></div>
+    <div class="tx"><div class="top"><h3>18" svarta 5-eker, vinterhjul</h3><span class="rt">★ 4,9</span></div><div class="meta">8Jx18 · ET45 · 5x108 · Västerås</div><div class="pr"><b>5 300 kr</b> <span>· frakt 449 kr</span></div></div></a>
+  </div>
+ </div>
+</section>
+
+<section id="sa-funkar-det" style="padding-top:0">
+ <div class="w">
+  <div class="sh"><div><h2>Så funkar trygg köp</h2><p>Tre steg. Ingen Swish i förskott.</p></div></div>
+  <div class="how">
+   <div class="step"><span class="n">1</span><h3>Betala till Zaah</h3><p>Lägg bud eller köp direkt. Pengarna hålls hos vår betalpartner, inte hos säljaren.</p></div>
+   <div class="step"><span class="n">2</span><h3>Få det hemskickat</h3><p>Frakt i hela Sverige, även hela hjulsatser och stora delar. Du följer leveransen.</p></div>
+   <div class="step"><span class="n">3</span><h3>Godkänn, säljaren får betalt</h3><p>Stämmer allt med annonsen trycker du Godkänn. Först då betalas säljaren.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="garanti" style="padding-top:0">
+ <div class="w">
+  <div class="guar">
+   <div>
+    <h2>Pengarna hålls tills du <span>sagt ja.</span></h2>
+    <p>Begagnat ska kännas lika tryggt som att handla nytt. Därför står Zaah mellan köpare och säljare i varje affär.</p>
+    <ul class="checks">
+     <li><span class="c"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Varje säljare verifieras med BankID</b><small>Du vet alltid vem du handlar av.</small></div></li>
+     <li><span class="c"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Krav på bilder av märkning och skador</b><small>Det du ser är det du får.</small></div></li>
+     <li><span class="c"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Stämmer det inte? Pengarna stannar hos oss</b><small>Anmäl innan godkännandetiden gått ut, så hjälper vi till.</small></div></li>
+    </ul>
+    <a class="btn lg" href="#">Läs mer om trygg betalning</a>
+   </div>
+   <div class="mock" aria-label="Exempel på köp under trygg betalning">
+    <div class="row"><img src="img/l-hjul1.jpg" alt=""><div><span class="st"><i></i>Väntar på ditt godkännande</span><h4>19" svarta fälgar med sommardäck</h4><div class="sum">Order 10423 · exempel</div></div></div>
+    <div class="track"><span class="d"></span><span class="d"></span><span class="d"></span><span class="a"></span></div>
+    <div class="tl"><span>Betald</span><span>Skickad</span><span>Levererad</span><b>Godkänn</b></div>
+    <div class="held"><div><small>Hålls tryggt av Zaah</small><b>6 649 kr</b></div><svg class="i" viewBox="0 0 24 24" style="width:28px;height:28px;color:var(--ok)"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+    <div class="btns"><a class="btn ghost" href="#">Något stämmer inte</a><a class="btn" href="#">Godkänn varan</a></div>
+    <div class="seller"><span class="av">JK</span><span>Johan K.</span><span class="badge"><svg class="i" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>BankID</span><span style="margin-left:auto;color:var(--mut)">★ 4,8 (23)</span></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="salj" style="padding-top:0">
+ <div class="w sell">
+  <div class="ph"><img src="img/salj.jpg" alt="Person som hanterar ett däck i en verkstad" loading="lazy"></div>
+  <div>
+   <h2>Står det något i garaget? Sälj det.</h2>
+   <p>Fota, välj fast pris eller budgivning, och skicka med vår fraktetikett. Du får betalt så fort köparen godkänt.</p>
+   <div class="stats"><div><b>0 kr</b><small>att lägga upp</small></div><div><b>0 kr</b><small>om det inte säljs</small></div><div><b>X %</b><small>vid affär (ej satt)</small></div></div>
+   <a class="btn lg dark" href="salj.html">Lägg upp en annons</a>
+   <p class="micro">Gratis att lägga upp. Du betalar bara när det blir en affär.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="w">
+  <div class="fg">
+   <div><a class="logo" href="index.html">ZAAH<b>.</b></a><p style="max-width:320px;margin:12px 0 0">Marknadsplatsen för allt till bilen. Zaah är grundaren Marcels smeknamn, det han säger när han ser en fet bil.</p></div>
+   <div><h4>Köp</h4><a href="#">Bilar</a><a href="annons.html">Fälgar &amp; hjul</a><a href="#">Däck</a><a href="#">Reservdelar</a><a href="#">Tillbehör</a></div>
+   <div><h4>Sälj</h4><a href="salj.html">Lägg upp annons</a><a href="#">Avgifter</a><a href="#">Frakt</a><a href="#garanti">Trygg betalning</a></div>
+   <div><h4>Zaah</h4><a href="#">Om oss</a><a href="#">Villkor</a><a href="#">Personuppgifter</a><a href="mailto:info@zaah.se">info@zaah.se</a></div>
+  </div>
+  <div class="fb"><span>© 2026 Zaah · Skiss</span><span>Betalning via betalpartner · Identifiering med BankID · Foton: Unsplash</span></div>
+ </div>
+</footer>
+<script>(function(){var d=document.documentElement,b=document.querySelector('.theme');function lab(){b.setAttribute('aria-label',d.classList.contains('dark')?'Byt till ljust läge':'Byt till mörkt läge')}lab();
+b.addEventListener('click',function(){var dk=d.classList.toggle('dark');try{localStorage.setItem('zaah-theme',dk?'dark':'light')}catch(e){}lab()});
+try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(e){if(!localStorage.getItem('zaah-theme')){d.classList.toggle('dark',e.matches);lab()}})}catch(e){}})();</script>
+</body>
+</html>
