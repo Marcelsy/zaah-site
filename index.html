@@ -3,58 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zaah – Köp och sälj fälgar och hjul tryggt i hela Sverige</title>
-<meta name="description" content="Zaah: marknadsplats för fälgar, däck och hjul. Pengarna hålls tills köparen godkänt varan, frakt av hela hjulsatser i hela Sverige och budgivning. Skriv upp dig på väntelistan.">
+<title>Zaah – Köp och sälj allt till bilen tryggt</title>
+<meta name="description" content="Bilar, fälgar, däck, delar och tillbehör. Pengarna hålls tills köparen godkänt varan. Buda eller köp direkt. Gratis att lägga upp. Skriv upp dig.">
+<link rel="canonical" href="https://zaah.se/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f1115">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:site_name" content="Zaah">
+<meta property="og:title" content="Zaah – Köp och sälj allt till bilen tryggt">
+<meta property="og:description" content="Bilar, fälgar, däck, delar och tillbehör. Pengarna hålls tills köparen godkänt varan. Buda eller köp direkt. Gratis att lägga upp.">
+<meta property="og:url" content="https://zaah.se/">
+<meta property="og:image" content="https://zaah.se/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Svart bil i mörker, profil mot mörk bakgrund">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zaah – Köp och sälj allt till bilen tryggt">
+<meta name="twitter:description" content="Bilar, fälgar, däck, delar och tillbehör. Pengarna hålls tills köparen godkänt varan. Buda eller köp direkt. Gratis att lägga upp.">
+<meta name="twitter:image" content="https://zaah.se/og.jpg">
+<meta name="twitter:image:alt" content="Svart bil i mörker, profil mot mörk bakgrund">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://zaah.se/#organization",
+      "name": "Zaah",
+      "url": "https://zaah.se/",
+      "logo": "https://zaah.se/og.jpg",
+      "email": "info@zaah.se",
+      "description": "Marknadsplats för bilar, fälgar och hjul, däck, reservdelar och tillbehör. Pengarna hålls tills köparen godkänt varan."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://zaah.se/#website",
+      "name": "Zaah",
+      "url": "https://zaah.se/",
+      "inLanguage": "sv",
+      "publisher": { "@id": "https://zaah.se/#organization" }
+    }
+  ]
+}
+</script>
 <style>
   *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#0f1115;color:#eef0f3;line-height:1.5}
-  .wrap{max-width:720px;margin:0 auto;padding:32px 20px 48px}
-  .logo{font-weight:800;font-size:28px;letter-spacing:1px}
+  html{color-scheme:dark}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#0f1115;color:#eef0f3;line-height:1.45}
+  .wrap{max-width:720px;margin:0 auto;padding:10px 16px 40px}
+  .logo{font-weight:800;font-size:24px;letter-spacing:1px;line-height:1}
   .logo span{color:#ffb000}
-  h1{font-size:34px;line-height:1.15;margin:28px 0 10px}
-  .lead{font-size:18px;color:#c4c8d0;margin:0 0 24px}
-  ul.usp{list-style:none;padding:0;margin:0 0 28px}
-  ul.usp li{padding:8px 0 8px 30px;position:relative}
-  ul.usp li:before{content:"✓";position:absolute;left:0;color:#ffb000;font-weight:700}
-  .card{background:#1a1d24;border-radius:12px;padding:22px}
-  .roles{display:flex;gap:10px;margin-bottom:18px}
+  h1{font-size:26px;line-height:1.08;margin:8px 0 6px}
+  h1 .tryggt{color:#ffb000}
+  .lead{font-size:15px;line-height:1.35;color:#c4c8d0;margin:0 0 8px}
+  .chips,.trust{list-style:none;padding:0;margin:0}
+  .chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+  .chips li{border:1px solid #333845;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:600;color:#d5d8de}
+  .trust{display:flex;flex-wrap:wrap;gap:2px 10px;margin:0 0 8px;font-size:12px;color:#c4c8d0}
+  .trust li{display:flex;align-items:center;gap:6px}
+  .trust li:before{content:"✓";color:#ffb000;font-weight:800}
+  .card{background:#1a1d24;border-radius:12px;padding:12px 12px 14px}
+  .card h2{font-size:18px;line-height:1.2;margin:0 0 2px}
+  .roles{display:flex;gap:8px;margin:8px 0 0}
   .roles label{flex:1;cursor:pointer}
   .roles input{position:absolute;opacity:0}
-  .roles span{display:block;text-align:center;padding:14px 6px;border:2px solid #333845;border-radius:10px;font-weight:600}
+  .roles span{display:block;text-align:center;padding:8px 4px;border:2px solid #333845;border-radius:10px;font-weight:600}
   .roles input:checked + span{border-color:#ffb000;background:#2a2410}
   .roles input:focus-visible + span{outline:2px solid #fff}
-  label.f{display:block;font-size:14px;color:#c4c8d0;margin:12px 0 4px}
-  input[type=email],input[type=text],textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #333845;background:#0f1115;color:#eef0f3;font-size:16px}
-  textarea{min-height:80px;resize:vertical}
-  .consent{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:#c4c8d0;margin:16px 0}
-  button{width:100%;padding:14px;border:0;border-radius:10px;background:#ffb000;color:#111;font-size:17px;font-weight:700;cursor:pointer}
-  a.demo{display:block;width:100%;margin-top:12px;padding:14px 12px;border:2px solid #ffb000;border-radius:10px;background:transparent;color:#ffb000;font-size:16px;font-weight:700;text-align:center;text-decoration:none;line-height:1.3}
+  label.f{display:block;font-size:13px;color:#c4c8d0;margin:8px 0 3px}
+  input[type=email],input[type=text],textarea{width:100%;padding:8px 12px;border-radius:8px;border:1px solid #333845;background:#0f1115;color:#eef0f3;font-size:16px;font-family:inherit}
+  textarea{min-height:42px;resize:vertical}
+  .consent{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:#c4c8d0;margin:8px 0}
+  button{width:100%;padding:12px;border:0;border-radius:10px;background:#ffb000;color:#111;font-size:17px;font-weight:700;cursor:pointer}
+  button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .small{font-size:13px;color:#9aa1ad}
+  .thanks{display:none;text-align:center;padding:12px 8px 4px}
+  footer{margin-top:28px}
+  footer h2{font-size:16px;margin:18px 0 6px}
+  a{color:#ffb000}
+  a.demo{display:block;width:100%;margin-top:10px;padding:12px;border:2px solid #ffb000;border-radius:10px;background:transparent;color:#ffb000;font-size:16px;font-weight:700;text-align:center;text-decoration:none;line-height:1.3}
   a.demo:hover{background:#2a2410}
   a.demo:focus-visible{outline:2px solid #fff;outline-offset:2px}
-  .small{font-size:13px;color:#8a909c}
-  .thanks{display:none;text-align:center;padding:20px}
-  footer{margin-top:32px}
-  a{color:#ffb000}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .btn-sec{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid #3a3f4b;color:#eef0f3;background:transparent;font-weight:600;font-size:14px;line-height:1;text-decoration:none;white-space:nowrap}
+  .btn-sec:hover{border-color:#ffb000;color:#ffb000}
+  .btn-sec:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .why{margin:28px 0 0}
+  .why .kicker{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ffb000}
+  .why .kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:#ffb000;flex:none}
+  .why h2{font-size:26px;line-height:1.15;margin:0 0 14px}
+  .cmp{display:grid;gap:8px}
+  .crow{background:#1a1d24;border-radius:12px;padding:14px}
+  .crow h3{margin:0 0 10px;font-size:16px}
+  .cell{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:start;margin:0;font-size:14.5px;line-height:1.4}
+  .cell + .cell{margin-top:8px}
+  .cell.no{color:#b7bcc6}
+  .mk{font-weight:800;line-height:1.35}
+  .cell.yes .mk{color:#ffb000}
+  .cell.no .mk{color:#6e7582}
+  .who{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:2px}
+  .cell.yes .who{color:#ffb000}
+  .cell.no .who{color:#8a909c}
+  @media(min-width:640px){
+    .wrap{padding:32px 20px 48px}
+    h1{font-size:40px;line-height:1.12;margin:24px 0 10px}
+    .lead{font-size:18px;line-height:1.45;margin-bottom:16px}
+    .card{padding:22px}
+    .card h2{font-size:22px}
+    .crow{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;align-items:start}
+    .crow h3{grid-column:1/-1;margin:0}
+    .cell + .cell{margin-top:0}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="logo">ZAAH<span>.</span></div>
+  <div class="top">
+    <div class="logo">ZAAH<span>.</span></div>
+    <a class="btn-sec" href="https://zaah-demo.netlify.app/" target="_blank" rel="noopener">Kika på en demo</a>
+  </div>
 
-  <h1>Köp och sälj fälgar och hjul tryggt i hela Sverige</h1>
-  <p class="lead">Pengarna hålls tills köparen har fått och godkänt varan. Vi fraktar hela hjulsatser landet runt, och du kan buda eller köpa direkt.</p>
-
-  <ul class="usp">
-    <li><strong>Trygg betalning:</strong> köparen betalar till Zaah, och säljaren får pengarna först när köparen fått varan och godkänt den. Inga bluffar, inget förskott på chans.</li>
-    <li><strong>Frakt av hela hjulsatser:</strong> fyra kompletta hjul skickas i hela Sverige, inte bara till den som bor i närheten.</li>
-    <li><strong>Budgivning:</strong> säljaren väljer fast pris eller låter köparna buda.</li>
-    <li><strong>Det du ser är det du får:</strong> krav på bilder av märkning, mönsterdjup och skador.</li>
-    <li><strong>Hitta rätt direkt:</strong> sök på tum, ET och bultmönster, eller skriv ditt regnummer och se det som passar bilen.</li>
+  <h1>Köp och sälj allt till bilen. <span class="tryggt">Tryggt.</span></h1>
+  <p class="lead">Pengarna hålls tills köparen godkänt varan. Buda eller köp direkt.</p>
+  <ul class="chips" aria-label="Kategorier">
+    <li>Bilar</li>
+    <li>Fälgar &amp; hjul</li>
+    <li>Däck</li>
+    <li>Delar</li>
+    <li>Tillbehör</li>
+  </ul>
+  <ul class="trust">
+    <li>Pengarna hålls tills du godkänt</li>
+    <li>Frakt i hela Sverige</li>
+    <li>Gratis att lägga upp</li>
   </ul>
 
   <div class="card">
-    <h2 style="margin-top:0">Skriv upp dig på väntelistan</h2>
-    <p class="small" style="margin-top:-6px">Vi öppnar när det finns tillräckligt många köpare och säljare. Anmälda får veta först.</p>
+    <h2>Skriv upp dig på väntelistan</h2>
+    <p class="small">Anmälda får veta först.</p>
 
     <!-- Kopplat till Google Formulär (formResponse). Svar hamnar i kalkylarket. -->
     <form id="wl" action="https://docs.google.com/forms/d/e/1FAIpQLScyXDvJ_1ugcjxSChM-llNkuofNUmPQUT4ImgSXOSxRnip-VA/formResponse" method="POST" target="hidden_iframe">
@@ -68,10 +158,10 @@
       <input id="email" type="email" name="entry.2058369769" required autocomplete="email" placeholder="namn@exempel.se">
 
       <label class="f" for="bil">Bilmodell eller regnummer (frivilligt)</label>
-      <input id="bil" type="text" name="entry.1169066455" placeholder="t.ex. Volvo V70 2012 eller ABC123">
+      <input id="bil" type="text" name="entry.1169066455" placeholder="t.ex. Golf 2015 eller ABC123">
 
       <label class="f" for="vad" id="vadlabel">Vad letar du efter?</label>
-      <textarea id="vad" name="entry.68677794" placeholder="t.ex. vinterhjul till Volvo V60, 18 tum"></textarea>
+      <textarea id="vad" name="entry.68677794" placeholder="t.ex. begagnad Golf 2015, vinterhjul 17 tum, bakljus till V70"></textarea>
 
       <div class="consent">
         <input id="ok" type="checkbox" name="entry.2021018339" value="Ja" required>
@@ -79,18 +169,56 @@
       </div>
 
       <button type="submit">Ställ mig i kön</button>
+      <p class="small" style="margin:8px 0 0">Vi öppnar när det finns tillräckligt många köpare och säljare.</p>
     </form>
     <a class="demo" href="https://zaah-demo.netlify.app/" target="_blank" rel="noopener">Se hur Zaah kommer att se ut →</a>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none" title="hidden"></iframe>
     <div class="thanks" id="thanks">
       <h3>Tack! Du står på listan.</h3>
-      <p class="small">Tipsa gärna en kompis som säljer eller letar fälgar och hjul. Ju fler vi är, desto snabbare öppnar vi.</p>
+      <p class="small">Tipsa gärna någon som köper eller säljer något till bilen. Ju fler vi är, desto snabbare öppnar vi.</p>
     </div>
   </div>
 
+  <section class="why" id="darfor" aria-labelledby="darfor-h">
+    <p class="kicker">Därför Zaah</p>
+    <h2 id="darfor-h">Det andra annonssajter inte gör</h2>
+    <div class="cmp">
+      <article class="crow">
+        <h3>Trygg betalning</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Pengarna hålls tills köparen godkänt varan.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Betalning direkt mellan köpare och säljare. Risken hos köparen.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Frakt i hela Sverige</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Frakt i hela Sverige, även hela hjulsatser och större delar.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Frakt med köpskydd stannar ofta vid ca 20 kg, så tunga grejer blir lokala affärer utan skydd.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Bud eller Köp nu</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Du väljer. Budgivning, Köp nu, eller båda.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Oftast bara fast pris, eller bara bud.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Hitta rätt direkt</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Sök på regnummer och se det som passar bilen. Spec när det behövs: ET, bultmönster, navhål, däckdimension.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Fritext. Om det passar får du räkna ut själv.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Bilder och BankID</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Bilder som visar skicket. På hjul krävs märkning, mönsterdjup och skador. Säljare verifierade med BankID.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Bilder och vem som säljer är upp till säljaren.</span></p>
+      </article>
+      <article class="crow">
+        <h3>Gratis att lägga upp</h3>
+        <p class="cell yes"><span class="mk" aria-hidden="true">✓</span><span><span class="who">Zaah</span>Ingen annonsavgift. Säljaren betalar bara när det blir en affär.</span></p>
+        <p class="cell no"><span class="mk" aria-hidden="true">✕</span><span><span class="who">Vanliga annonssajter</span>Ofta en avgift redan för att lägga upp.</span></p>
+      </article>
+    </div>
+  </section>
+
   <footer>
-    <h3>Personuppgifter (GDPR)</h3>
-    <p class="small">Vi sparar din e-post, din roll och det du frivilligt skriver om bil och önskemål. Syftet är att mäta intresset och meddela dig när Zaah öppnar. Rättslig grund är ditt samtycke, som du kan återkalla när du vill. Uppgifterna lagras hos Google (Google Formulär/Kalkylark) och delas inte med eller säljs till någon annan. Vi raderar dem senast 12 månader efter anmälan, eller direkt om du ber om det. Du har rätt att få veta vad vi sparat, få det rättat eller raderat, och att klaga hos IMY. Kontakt: <a href="mailto:info@zaah.se">info@zaah.se</a>. Personuppgiftsansvarig: Marcel Sy.</p>
+    <h2>Personuppgifter (GDPR)</h2>
+    <p class="small">Vi sparar din e-post, din roll och det du frivilligt skriver om bilen och vad du vill köpa eller sälja. Syftet är att mäta intresset och meddela dig när Zaah öppnar. Rättslig grund är ditt samtycke, som du kan återkalla när du vill. Uppgifterna lagras hos Google (Google Formulär/Kalkylark) och delas inte med eller säljs till någon annan. Vi raderar dem senast 12 månader efter anmälan, eller direkt om du ber om det. Du har rätt att få veta vad vi sparat, få det rättat eller raderat, och att klaga hos IMY. Kontakt: <a href="mailto:info@zaah.se">info@zaah.se</a>. Personuppgiftsansvarig: Marcel Sy.</p>
     <p class="small">© 2026 Zaah</p>
   </footer>
 </div>
@@ -98,9 +226,9 @@
 <script>
   // Byter frågetext efter roll
   var texter={
-    'Köpa':['Vad letar du efter?','t.ex. vinterhjul till Volvo V60, 18 tum'],
-    'Sälja':['Vad vill du sälja?','t.ex. 4 st 17-tum BBS, 5x112, ET 35, med sommardäck'],
-    'Både och':['Vad vill du köpa och sälja?','t.ex. säljer 17-tum sommarhjul, letar 18-tum vinterhjul']
+    'Köpa':['Vad letar du efter?','t.ex. begagnad Golf 2015, vinterhjul 17 tum, bakljus till V70'],
+    'Sälja':['Vad vill du sälja?','t.ex. begagnad Golf 2015, vinterhjul 17 tum, bakljus till V70'],
+    'Både och':['Vad vill du köpa och sälja?','t.ex. säljer vinterhjul 17 tum, letar begagnad Golf 2015 eller bakljus till V70']
   };
   document.querySelectorAll('input[name="entry.1588808678"]').forEach(function(r){
     r.addEventListener('change',function(){
