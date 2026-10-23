@@ -2,63 +2,63 @@ ZAAH SKISS v3 – BILDKÄLLOR (tillfälliga bilder, ersätts med Marcels egna fo
 Alla bilder: Unsplash, gratis enligt Unsplash License (https://unsplash.com/license). Kontrollerat på varje bildsida 2026-10-22: "Free to use under the Unsplash License", inga Unsplash+-bilder.
 Licensen tillåter kommersiell användning utan krav på namngivning, men man får inte sälja bilderna som de är eller bygga en konkurrerande bildtjänst. Namngivning nedan är frivillig men god sed.
 
-img/hero.jpg
+img/hero.webp
   Bild: https://unsplash.com/photos/black-sedan-FMbWFDiVRPs
   Fotograf: https://unsplash.com/@samuele_piccarini
   Licens: Unsplash License
-img/cat-bilar.jpg
+img/cat-bilar.webp
   Bild: https://unsplash.com/photos/grey-porsche-sports-car-parked-outside-ZdLFPE0AZBU
   Fotograf: https://unsplash.com/@kahlorr
   Licens: Unsplash License
-img/cat-falgar.jpg
+img/cat-falgar.webp
   Bild: https://unsplash.com/photos/close-up-photography-of-car-wheel-7eCBiZgyr4E
   Fotograf: https://unsplash.com/@grebenyev
   Licens: Unsplash License
-img/cat-dack.jpg
+img/cat-dack.webp
   Bild: https://unsplash.com/photos/stack-of-car-tires-with-one-alloy-wheel-on-top-Y_251QYX55Y
   Fotograf: https://unsplash.com/@introspectivedsgn
   Licens: Unsplash License
-img/cat-delar.jpg
+img/cat-delar.webp
   Bild: https://unsplash.com/photos/a-close-up-of-a-brake-on-a-vehicle-ii4XEyJEm_I
   Fotograf: https://unsplash.com/@toby_hall28
   Licens: Unsplash License
-img/cat-tillbehor.jpg
+img/cat-tillbehor.webp
   Bild: https://unsplash.com/photos/a-dark-grey-audi-station-wagon-with-a-roof-box-B0ZWadUTAe0
   Fotograf: https://unsplash.com/@felis_catus
   Licens: Unsplash License
-img/l-bil1.jpg
+img/l-bil1.webp
   Bild: https://unsplash.com/photos/white-car-m3m-lnR90uM
   Fotograf: https://unsplash.com/@peterbroomfield
   Licens: Unsplash License
-img/l-hjul1.jpg
+img/l-hjul1.webp
   Bild: https://unsplash.com/photos/black-car-wheel-with-red-caliper-ZTl9vrLc-Bo
   Fotograf: https://unsplash.com/@visualsbyosi
   Licens: Unsplash License
-img/l-dack1.jpg
+img/l-dack1.webp
   Bild: https://unsplash.com/photos/four-vehicle-tires--gqb3xbGa5Y
   Fotograf: https://unsplash.com/@shadrach_warid
   Licens: Unsplash License
-img/l-hjul2.jpg
+img/l-hjul2.webp
   Bild: https://unsplash.com/photos/brown-and-black-car-wheel-RowFPyc2RrA
   Fotograf: https://unsplash.com/@giorgiotrovato
   Licens: Unsplash License
-img/l-del1.jpg
+img/l-del1.webp
   Bild: https://unsplash.com/photos/gray-and-brown-round-metal-tool-fwnTOncjeB0
   Fotograf: https://unsplash.com/@deepain108
   Licens: Unsplash License
-img/l-bil2.jpg
+img/l-bil2.webp
   Bild: https://unsplash.com/photos/black-car-on-road-during-night-time-wVTPr2HDXUQ
   Fotograf: https://unsplash.com/@alstra
   Licens: Unsplash License
-img/l-tillb1.jpg
+img/l-tillb1.webp
   Bild: https://unsplash.com/photos/car-roof-cargo-box-with-stickers-against-a-cloudy-sky-yYpnm1kERVE
   Fotograf: https://unsplash.com/@abhishek_mgv
   Licens: Unsplash License
-img/l-hjul3.jpg
+img/l-hjul3.webp
   Bild: https://unsplash.com/photos/black-5-spoke-wheel-with-tire-08gltVvUO3A
   Fotograf: https://unsplash.com/@klim11
   Licens: Unsplash License
-img/salj.jpg
+img/salj.webp
   Bild: https://unsplash.com/photos/a-man-working-on-a-tire-in-a-garage-9uHal2Dd9aE
   Fotograf: https://unsplash.com/@jimmynilssonmasth
   Licens: Unsplash License
